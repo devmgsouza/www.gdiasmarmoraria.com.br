@@ -15,21 +15,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"G.Dias Marmoraria","url":"https://www.gdiasmarmoraria.com.br/","telephone":"+55-15-3537-5059","email":"contato@gdiasmarmoraria.com.br","address":{"@type":"PostalAddress","streetAddress":"Rua Francisco Weiss Júnior, 812","addressLocality":"Itapetininga","addressRegion":"SP","postalCode":"18214-560","addressCountry":"BR"},"sameAs":["https://www.instagram.com/gdiasmarmoraria/","https://www.facebook.com/gdias.marmoraria/"]}</script>
 <link rel="stylesheet" href="css/styles.css">
+<script src="js/site.js" defer></script>
 </head>
 <body>
 
+<a class="skip" href="#sobre">Pular para o conteúdo</a>
 <header>
   <div class="wrap nav">
     <a class="logo" href="#topo">G.DIAS <span class="dot">·</span> MARMORARIA</a>
-    <nav class="links">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="links" id="menu" aria-label="Principal">
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
-      <a href="#inspiracoes">Inspirações</a>
+      <a href="#galeria">Galeria</a>
       <a href="#diferenciais">Diferenciais</a>
       <a href="#contato">Contato</a>
+      <a class="nav-ig" href="https://www.instagram.com/gdiasmarmoraria/" target="_blank" rel="noopener" aria-label="Instagram @gdiasmarmoraria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.3" cy="6.7" r="1"/></svg><span>@gdiasmarmoraria</span></a>
+      <a class="btn btn-primary nav-cta" href="https://wa.me/5515991174745" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </nav>
-    <a class="btn btn-primary" href="https://wa.me/5515991174745" target="_blank" rel="noopener">Falar no WhatsApp</a>
   </div>
 </header>
 
@@ -39,19 +44,25 @@
     <path d="M 100 60 C 260 120, 340 40, 500 100 S 700 180, 900 120 S 1050 40, 1220 90"/>
     <path d="M -40 520 C 140 500, 220 540, 380 505 S 560 470, 700 500"/>
   </svg>
-  <div class="wrap">
+  <div class="wrap hero-grid">
+   <div class="hero-copy">
     <p class="eyebrow">Itapetininga · SP — desde a bancada ao acabamento</p>
     <h1>Mármore e granito, cortados <em>sob medida</em> para o seu projeto.</h1>
     <p class="lead">Selecionamos as chapas, cuidamos do corte e entregamos a instalação com o acabamento que sua obra merece. Nacionais e importados, com mais de 10 anos de experiência no ofício.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="https://wa.me/5515991174745" target="_blank" rel="noopener">Solicitar orçamento</a>
-      <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+      <a class="btn btn-ghost" href="#galeria">Ver nossos trabalhos</a>
     </div>
     <div class="hero-stats">
       <div class="stat"><b>10+</b><span>anos de experiência</span></div>
       <div class="stat"><b>2</b><span>linhas: nacionais e importados</span></div>
       <div class="stat"><b>1</b><span>atendimento do orçamento à instalação</span></div>
     </div>
+   </div>
+   <figure class="hero-photo">
+     <img src="imgs/area_gourmet.jpg" width="1400" height="763" alt="Área gourmet com bancada em pedra natural escura" fetchpriority="high">
+     <figcaption>Imagem ilustrativa</figcaption>
+   </figure>
   </div>
 </section>
 
@@ -75,7 +86,7 @@
 <section class="about" id="sobre">
   <div class="wrap about-grid">
     <div class="about-copy">
-      <p class="eyebrow" style="color:var(--bronze-dark)">Bem-vindo(a)</p>
+      <p class="eyebrow">Bem-vindo(a)</p>
       <p>Na G.Dias Marmoraria, acreditamos que o melhor atendimento nasce do equilíbrio entre qualidade, prazo e preço justo. É assim que conduzimos cada projeto: com material de procedência, corte preciso e instalação cuidadosa.</p>
       <p>Nosso trabalho começa muito antes da instalação — na escolha da chapa certa, na medição correta e na conversa franca sobre prazos e valores. O resultado é uma peça que se encaixa exatamente onde deveria.</p>
       <p class="signature-line">"O melhor em mármores e granitos, com atendimento que respeita o seu tempo."</p>
@@ -122,7 +133,7 @@
 <section class="services" id="servicos">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" style="color:var(--bronze-dark)">Nossos serviços</p>
+      <p class="eyebrow">Nossos serviços</p>
       <h2>Do projeto residencial ao comercial, cortamos e instalamos com precisão.</h2>
       <p>Trabalhamos com mármore, granito e outras pedras naturais em qualquer ambiente da sua casa ou empreendimento.</p>
     </div>
@@ -163,49 +174,75 @@
   </div>
 </section>
 
-<section class="portfolio" id="inspiracoes">
+<section class="gallery" id="galeria">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" style="color:var(--bronze-dark)">Inspirações</p>
-      <h2>Ideias em pedra natural para o seu próximo projeto.</h2>
-      <p>Uma seleção de ambientes para inspirar você: veja o que o mármore e o granito podem fazer pela sua casa e traga sua ideia para conversarmos. Imagens ilustrativas.</p>
+      <p class="eyebrow">Galeria</p>
+      <h2>Nossos trabalhos, do corte à instalação.</h2>
+      <p>Uma seleção de ambientes em mármore e granito. Imagens ilustrativas; os projetos reais entregues estão no nosso Instagram.</p>
     </div>
-    <div class="portfolio-grid">
-      <figure class="portfolio-item">
-        <div class="frame"><img src="imgs/bancada_de_cozinha.jpg" alt="Bancada de cozinha em granito com cuba esculpida e acabamento sob medida" loading="lazy"></div>
-        <figcaption>Bancada de cozinha</figcaption>
-      </figure>
-      <figure class="portfolio-item">
-        <div class="frame"><img src="imgs/banheiro_lavabo.jpeg" alt="Bancada de banheiro e lavabo em mármore com cuba e espelho" loading="lazy"></div>
-        <figcaption>Banheiro e lavabo</figcaption>
-      </figure>
-      <figure class="portfolio-item">
-        <div class="frame"><img src="imgs/area_gourmet.jpg" alt="Área gourmet com bancada e revestimento em pedra natural" loading="lazy"></div>
-        <figcaption>Área gourmet</figcaption>
-      </figure>
-      <figure class="portfolio-item">
-        <div class="frame"><img src="imgs/escadas.jpg" alt="Escada revestida em granito com degraus e espelhos em pedra" loading="lazy"></div>
-        <figcaption>Escadas</figcaption>
-      </figure>
-      <figure class="portfolio-item">
-        <div class="frame"><img src="imgs/Mesa.jpg" alt="Mesa com tampo em pedra natural cortado sob medida" loading="lazy"></div>
-        <figcaption>Mesas em pedra</figcaption>
-      </figure>
-      <figure class="portfolio-item">
-        <div class="frame"><img src="imgs/nicho.jpg" alt="Nicho em mármore embutido com acabamento polido" loading="lazy"></div>
-        <figcaption>Nichos</figcaption>
-      </figure>
-      <figure class="portfolio-item">
-        <div class="frame"><img src="imgs/Polimento.jpg" alt="Serviço de polimento devolvendo o brilho à pedra instalada" loading="lazy"></div>
-        <figcaption>Polimento</figcaption>
-      </figure>
-      <figure class="portfolio-item">
-        <div class="frame"><img src="imgs/projeto_personalizado.jpg" alt="Ambiente com peças personalizadas em mármore e granito sob medida" loading="lazy"></div>
-        <figcaption>Projetos personalizados</figcaption>
-      </figure>
+    <div class="chips" role="group" aria-label="Filtrar galeria">
+      <button class="chip" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+      <button class="chip" type="button" data-filter="cozinhas" aria-pressed="false">Cozinhas e gourmet</button>
+      <button class="chip" type="button" data-filter="banheiros" aria-pressed="false">Banheiros</button>
+      <button class="chip" type="button" data-filter="escadas" aria-pressed="false">Escadas</button>
+      <button class="chip" type="button" data-filter="mesas" aria-pressed="false">Mesas e nichos</button>
+      <button class="chip" type="button" data-filter="bastidores" aria-pressed="false">Bastidores</button>
+    </div>
+    <div class="g-grid">
+      <button class="g-item" type="button" data-cat="cozinhas" data-title="Bancada de cozinha">
+        <img src="imgs/bancada_de_cozinha.jpg" width="1400" height="763" alt="Bancada de cozinha em granito escuro com cuba e acabamento sob medida" loading="lazy">
+        <span class="g-cap">Bancada de cozinha</span>
+      </button>
+      <button class="g-item" type="button" data-cat="cozinhas" data-title="Área gourmet">
+        <img src="imgs/area_gourmet.jpg" width="1400" height="763" alt="Área gourmet com bancada e revestimento em pedra natural" loading="lazy">
+        <span class="g-cap">Área gourmet</span>
+      </button>
+      <button class="g-item" type="button" data-cat="banheiros" data-title="Banheiro e lavabo">
+        <img src="imgs/banheiro_lavabo.jpeg" width="1024" height="559" alt="Bancada de banheiro em mármore com cuba, espelho e iluminação" loading="lazy">
+        <span class="g-cap">Banheiro e lavabo</span>
+      </button>
+      <button class="g-item" type="button" data-cat="escadas" data-title="Escadas">
+        <img src="imgs/escadas.jpg" width="1400" height="763" alt="Escada revestida em pedra com degraus iluminados" loading="lazy">
+        <span class="g-cap">Escadas</span>
+      </button>
+      <button class="g-item" type="button" data-cat="mesas" data-title="Mesas em pedra">
+        <img src="imgs/Mesa.jpg" width="1400" height="763" alt="Mesa com tampo em pedra natural cortado sob medida" loading="lazy">
+        <span class="g-cap">Mesas em pedra</span>
+      </button>
+      <button class="g-item" type="button" data-cat="mesas" data-title="Nichos">
+        <img src="imgs/nicho.jpg" width="1400" height="763" alt="Nicho em mármore embutido com acabamento polido" loading="lazy">
+        <span class="g-cap">Nichos</span>
+      </button>
+      <button class="g-item" type="button" data-cat="bastidores" data-title="Polimento">
+        <img src="imgs/Polimento.jpg" width="1400" height="763" alt="Polimento devolvendo o brilho à pedra" loading="lazy">
+        <span class="g-cap">Polimento</span>
+      </button>
+      <button class="g-item" type="button" data-cat="bastidores" data-title="Projetos personalizados">
+        <img src="imgs/projeto_personalizado.jpg" width="1400" height="763" alt="Atendimento e projeto personalizado em pedra natural" loading="lazy">
+        <span class="g-cap">Projetos personalizados</span>
+      </button>
+    </div>
+    <div class="ig-card">
+      <div class="ig-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.3" cy="6.7" r="1"/></svg></div>
+      <div class="ig-card__text">
+        <b>Veja mais obras no Instagram</b>
+        <span>Acompanhe projetos novos, bastidores e instalações em <strong>@gdiasmarmoraria</strong>.</span>
+      </div>
+      <a class="btn btn-bronze" href="https://www.instagram.com/gdiasmarmoraria/" target="_blank" rel="noopener">Seguir no Instagram</a>
     </div>
   </div>
 </section>
+
+<dialog id="lightbox" aria-label="Imagem ampliada">
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-close" type="button" aria-label="Fechar">×</button>
+  <button class="lb-prev" type="button" aria-label="Anterior">‹</button>
+  <button class="lb-next" type="button" aria-label="Próxima">›</button>
+</dialog>
 
 <section class="cta-band">
   <div class="wrap cta-inner">
@@ -217,7 +254,7 @@
 <section class="contact" id="contato">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" style="color:var(--bronze-dark)">Contato</p>
+      <p class="eyebrow">Contato</p>
       <h2>Venha nos visitar ou fale pelo canal que preferir.</h2>
       <p>A satisfação de nossos clientes é fundamental — estamos à disposição para tirar dúvidas e fechar seu orçamento.</p>
     </div>
@@ -232,6 +269,10 @@
           <div><span class="label">WhatsApp</span><a class="value" href="https://wa.me/5515991174745" target="_blank" rel="noopener">Conversar agora →</a></div>
         </div>
         <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.3" cy="6.7" r="1"/></svg>
+          <div><span class="label">Instagram</span><a class="value" href="https://www.instagram.com/gdiasmarmoraria/" target="_blank" rel="noopener">@gdiasmarmoraria</a></div>
+        </div>
+        <div class="contact-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
           <div><span class="label">E-mail</span><a class="value" href="mailto:contato@gdiasmarmoraria.com.br">contato@gdiasmarmoraria.com.br</a></div>
         </div>
@@ -241,7 +282,7 @@
         </div>
         <div class="contact-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          <div><span class="label">Horário</span><span class="value">Aberto hoje — 08:00 às 18:00</span></div>
+          <div><span class="label">Horário</span><span class="value">08:00 às 18:00</span></div>
         </div>
       </div>
       <div class="map-frame">
